@@ -1,0 +1,48 @@
+.footer {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 140px;
+  background-color: rgba(77, 77, 77, 1);
+  color: rgba(255, 255, 255, 1);
+  padding-left: 19em;
+  padding-right: 17em;
+
+@media (max-width: 600px) {
+  .footer {
+   padding-left: 0em;
+   padding-right: 0em;
+} }
+  &__uppl {
+    margin: auto;
+    white-space: pre-line;
+    align-items: center;
+    text-align: center;
+    font-weight: 400;
+  }
+  &__uppl {
+    margin: auto;
+    white-space: pre-line;
+    align-items: center;
+    text-align: center;
+    font-weight: 400;
+  }
+}
+/*seinni hluti footer*/
+.footer2 {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 60px;
+  background-color: #4d4d4d;
+  color: #ffffff;
+  border-top: solid #8c8c8c;
+
+  &__bottom {
+   margin: auto;
+   white-space: pre-line;
+   align-items: center;
+   text-align: center;
+   color: #8c8c8c;
+   }
+ }

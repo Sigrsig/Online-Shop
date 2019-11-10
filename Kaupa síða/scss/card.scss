@@ -1,0 +1,135 @@
+.card {
+  text-align: center;
+  width: 100%;
+  min-width: 100px;
+  max-width: 400px;
+  overflow: hidden;
+  padding-bottom: 5em;
+  margin-top: 7.5em;
+  flex: 1 0 auto;
+  padding: 10px;
+}
+@media (max-width: 600px) {
+  .card {
+    margin-top: 3.75em;
+  }
+}
+
+@media (max-width: 400px) {
+  .card {
+    margin-top: 2.5em;
+  }
+}}
+
+  &__img {
+    width: 100%;
+    border-radius: 200px;
+    max-width: 300px;
+    text-align: center;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__heading {
+    width: 100%;
+    font-size: 1.5em;
+    font-style: italic;
+    padding-bottom: 1.25em;
+  }
+  &__heading2 {
+    width: 100%;
+    font-size: 1.5em;
+    font-style: italic;
+    padding-bottom: 1.25em;
+    margin-top: 0.75em;
+  }
+  @media (max-width: 600px) {
+    &__heading2 {
+      margin-top: 1.5em;
+  } }
+  &__heading3 {
+    width: 100%;
+    font-size: 1.5em;
+    font-style: italic;
+    padding-bottom: 1em;
+    margin-top: 0.75em;
+  }
+  @media (max-width: 600px) {
+    &__heading3 {
+      margin-top: 1.5em;
+  } }
+  &__nafn {
+    width: 100%;
+    font-weight: bold;
+  }
+  &__nafn2 {
+    width: 100%;
+    font-weight: bold;
+    margin-top: 1em;
+  }
+  @media (max-width: 600px) {
+    &__nafn2 {
+      margin-top: 2.2em;
+  } }
+  @media (max-width: 400px) {
+    &__nafn2 {
+      margin-top: 0em;
+  } }
+  &__nafn3 {
+    width: 100%;
+    font-weight: bold;
+    margin-top: 1em;
+  }
+  @media (max-width: 600px) {
+    &__nafn3 {
+    margin-top: 0em;
+  } }
+  &__askr {
+    width: 100%;
+<<<<<<< HEAD
+=======
+  width: 100%;
+  min-width: 200px;
+  max-width: 300px;
+
+  overflow: hidden;
+
+
+/*  border-radius: 3px;*/
+
+/*  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);*/
+
+  &__heading {
+    width: 100%;
+    margin-bottom: 15px;
+
+    font-size: 1.5rem;
+
+    word-break: break-word;
+  }
+
+  &__content {
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__nafn {
+    margin-bottom: 30px;
+  }
+
+  &__img {
+    width: 100%;
+    min-width: 200px;
+    max-width: 100%;
+    border-radius: 25px;
+  }
+  &__askr {
+    margin-bottom: 30px;
+>>>>>>> a6b1b70d51ce0dc560ea2d2fc6cbc79df1cdf7f1
+>>>>>>> 1fc8ffc1b39cbf53cd45c1f41128c323f8e7cff4
+  }
+}

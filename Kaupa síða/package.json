@@ -1,0 +1,29 @@
+{
+  "name": "hopverkefni",
+  "version": "1.0.0",
+  "description": "Hópverkefni 2017",
+  "main": "index.js",
+  "scripts": {
+    "browser-sync": "browser-sync start --server --files index.html um.html kaupa.html style.css",
+    "sass": "node-sass styles.scss styles.css -w",
+    "dev": "npm-run-all --parallel sass browser-sync",
+    "lint": "stylelint styles.scss --syntax scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aheimdal/stora-verkefni1.git"
+  },
+  "author": "Anton H. Heimdal, Henríetta Þóra Magnúsdóttir, Sigríður Ösp Sigurðardóttir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aheimdal/stora-verkefni1/issues"
+  },
+  "homepage": "https://github.com/aheimdal/stora-verkefni1#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "npm-run-all": "^4.1.1"
+  },
+  "dependencies": {
+    "node-sass": "^4.5.3"
+  }
+}

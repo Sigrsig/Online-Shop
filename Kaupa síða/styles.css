@@ -1,0 +1,622 @@
+/*@charset "UTF-8";*/
+/* setjum box-sizing: border-box; á allt */
+html {
+  /* stylelint-disable-line */
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  /* stylelint-disable-line */
+  box-sizing: inherit;
+  /* fjarlægjum margin og padding */
+  padding: 0;
+  margin: 0; }
+
+html {
+  /* stylelint-disable-line */
+/*  margin-right: 20px;
+  margin-left: 20px;*/
+  font-size: 16px;
+  line-height: 1.5; }
+  @media (min-width: 1200px) {
+    html {
+      margin: 0; } }
+
+img {
+  /* stylelint-disable-line */
+  max-width: 100%; }
+
+body {
+  max-width: 1200px;
+  margin: auto;
+  overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif;
+}
+main {
+  /* stylelint-disable-line */
+  max-width: 1200px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -10px;
+  margin-bottom: 20px;
+  margin-left: -10px; }
+
+.col {
+  padding-right: 10px;
+  padding-left: 10px; }
+  .col-12 {
+    width: 100%; }
+  .col-6left {
+    width: 50%; }
+  .col-6right {
+    width: 50%; }
+@media (max-width: 600px) {
+  .col-sm-12 {
+    width: 100%; }
+  .col-sm-6-left {
+    width: 50%; }
+  .col-sm-6-right {
+    width: 50%;
+  } }
+@media (max-width: 400px) {
+  .col-sm4-12 {
+    width: 100%;
+  }
+ }
+
+.offset-2 {
+  margin-left: 16.66667%; }
+
+@media (max-width: 599px) {
+  .offset-sm-0 {
+   margin-left: 0;
+} }
+
+/* Header bar */
+.headbar {
+  position: fixed;
+  z-index: 9999;
+  background-color: rgba(77, 77, 77, 0.9);
+  color: rgba(255, 255, 255, 1);
+  width: 100%;
+  max-width: 1200px;
+  height: 3em;
+}
+  .headbar__text {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-left: 0.5em;
+    padding-top: 0.2em;
+    font-family: 'Roboto Slab', serif;
+    float: left;
+    display: inline-block;
+    color: rgba(255, 255, 255,1);
+    text-decoration: none;
+  }
+  .headbar__buttons {
+    height: 20%;
+    width: 20%;
+    position: absolute;
+    right: 0px;
+    margin-right: 0.5em;
+    padding-top: 0.5em;
+  }
+  .headbar__buttonum {
+    background-color: rgba(77, 77, 77, 0);
+    color: rgba(255, 255, 255, 1);
+    border: rgba(0, 0, 0, 1);
+    right: 35px;
+    position: absolute;
+    border-radius: 4px;
+    padding-top: 5px;
+    text-decoration: none;
+    width: 4.5em;
+    height: 2.5em;
+  }
+  .headbar__buttonum:hover {
+    cursor: pointer;
+  }
+  .headbar__buttonkaupa {
+    background-color: rgba(140, 140, 140, 1);
+    color: rgba(255, 255, 255, 1);
+    border: rgba(128, 128, 128, 1);
+    border-radius: 4px;
+    right: 5px;
+    position: absolute;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+  }
+  .headbar__buttonkaupa:hover {
+    cursor: pointer;
+  }
+
+/*header cover*/
+.headermynd {
+  display: flex;
+  margin-bottom: 16em;
+  width: 100%;
+  min-height: 900px;
+  background: transparent url(bg.jpg) no-repeat center center fixed;
+  background-size: cover;
+  padding: 2em;
+}
+  @keyframes fadein {
+   from {opacity:0;}
+   to {opacity:1;}
+  }
+  .headermynd__content {
+    margin: auto;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+  }
+  .headermynd__h1 {
+    font-size: 2.25em;
+    opacity: 0;
+    animation: fadein ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+  }
+  .headermynd__h2 {
+   font-size: 4.5em;
+   margin-bottom: 1em;
+   opacity: 0;
+   animation: fadein ease-in 1;
+   animation-fill-mode: forwards;
+   animation-duration: 1.5s;
+   animation-delay: 2s;
+}
+a.headermynd__button {
+    background-color: rgba(89, 89, 89, 1);
+    border: 1px solid rgba(89, 89, 89, 1);
+    border-radius: 3px;
+    color: rgba(238, 238, 238, 1);
+    font-size: 28px;
+    text-decoration: none;
+    padding: 10px 25px;
+    opacity: 0;
+    animation: fadein ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+    animation-delay: 3s;
+   }
+   .headermynd__button:hover {
+    cursor: pointer;
+   }
+   @media (max-width: 600px) {
+     .headermynd {
+      margin-bottom: 4em;
+     }
+     .headermynd__h2 {
+       font-size: 12vw;
+     }}
+
+/*textasvæði með mynd*/
+.text {
+}
+  .text__heading {
+    background-image: url("check.png");
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    padding-left: 45px;
+    justify-content: flex-start;
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'Roboto Slab', serif;
+    margin-top: 1em;
+  }
+  .text__p {
+    margin-left: 2.6em;
+    margin-bottom: 6em;
+    font-size: 1.125em;
+  }
+  @media (max-width: 600px) {
+    .text__p {
+      margin-bottom: 2em;
+    }
+    .text__img {
+      margin-top: 2.5em;
+    }
+  }
+  @media (max-width: 400px) {
+    .text__p {
+      margin-bottom: 2em;
+    }
+    .text__img {
+      margin-top: 1.5em;
+    } }
+
+/*prófílar notenda*/
+.profiles {
+  }
+  .profiles__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+    }
+  .profiles__col {
+    position: relative;
+    display: flex;
+    width: 33.33333%;
+    padding: 0;
+    }
+  @media (max-width: 600px) {
+    .profiles__col {
+      width: 50%;
+    } }
+  @media (max-width: 400px) {
+    .profiles__col {
+     width: 100%;
+    } }
+/*cards í prófílum*/
+.card {
+  text-align: center;
+  width: 100%;
+  min-width: 100px;
+  max-width: 400px;
+  overflow: hidden;
+  margin-bottom: 5em;
+  margin-top: 7.5em;
+  flex: 1 0 auto;
+  padding: 10px;
+}
+  .card__img {
+    width: 100%;
+    border-radius: 200px;
+    max-width: 300px;
+    text-align: center;
+}
+  .card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card__heading {
+    width: 100%;
+    font-size: 1.5em;
+    font-style: italic;
+    padding-bottom: 1.25em;
+  }
+  .card__heading2 {
+    width: 100%;
+    font-size: 1.5em;
+    font-style: italic;
+    padding-bottom: 1.25em;
+    margin-top: 0.75em;
+  }
+  .card__heading3 {
+    width: 100%;
+    font-size: 1.5em;
+    font-style: italic;
+    padding-bottom: 1em;
+    margin-top: 0.75em;
+  }
+  .card__nafn {
+    width: 100%;
+    font-weight: bold;
+  }
+  .card__nafn2 {
+    width: 100%;
+    font-weight: bold;
+    margin-top: 1em;
+  }
+  .card__nafn3 {
+    width: 100%;
+    font-weight: bold;
+    margin-top: 1em;
+  }
+  .card__askr {
+    width: 100%;
+  }
+  @media (max-width: 600px) {
+    .card {
+      margin-top: 3.75em;
+    }
+    .card__heading2 {
+      margin-top: 1.5em;
+  }
+    .card__heading3 {
+      margin-top: 1.5em;
+  }
+    .card__nafn2 {
+      margin-top: 2.2em;
+  }
+    .card__nafn3 {
+      margin-top: 0em;
+  } }
+  @media (max-width: 400px) {
+    .card {
+      margin-top: 2.5em;
+    }
+    .card__nafn2 {
+      margin-top: 0em;
+  } }
+
+/*texti og takki neðs á síðu*/
+.bida {
+  margin-top: 6.25em;
+  margin-bottom: 6.25em;
+  text-align: center;
+}
+.bida__text {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-bottom: 1.25em;
+  font-family: 'Roboto Slab', serif;
+}
+  .bida__button {
+   background-color: rgba(89, 89, 89, 1);
+   color: rgba(255, 255, 255, 1);
+   border: 1px solid rgba(89, 89, 89, 1);
+   border-radius: 3px;
+   padding: 10px 80px;
+   font-size: 2em;
+   text-align: center;
+   text-decoration: none;
+  }
+  .bida__button:hover {
+    cursor: pointer;
+  }
+
+/*Form síðan*/
+h1, legend {
+  font-family: 'Roboto Slab', serif;
+}
+
+.header__b {
+  opacity: 0.75;
+  background: url(bg-subpage.jpg) no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  word-wrap: break-word;
+  font-size: 2em;
+  color: rgba(255, 255, 255, 1);
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+.header__b h1 {
+  margin-left: 0.3em;
+}
+@media (max-width: 600px) {
+  .header__b h1  {
+    margin-left: 0.1em;
+  } }
+
+fieldset {
+  border: none;
+  padding: 1em;
+}
+legend {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: rgba(77, 77, 77, 1);
+}
+.input {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 5em;
+  padding-bottom: 1em;
+  }
+.personu {
+  width: 100%;
+  max-width: 35%;
+  min-width: 15em;
+}
+.greidslu {
+  width: 100%;
+  max-width: 35%;
+  min-width: 15em;
+}
+@media screen and (max-width: 600px) {
+     .personu {min-width: 17em; max-width: 50%;}
+    .greidslu {min-width: 17em; max-width: 50%;}
+}
+@media screen and (max-width: 400px) {
+     .personu {max-width: 30em;}
+    .greidslu {max-width: 30em;}
+    .checkbox input {margin-bottom: 1em;}
+    .input{padding-bottom: 2em;}
+    .header__b {background-position: left;}
+}
+select {
+  background-color: rgba(250, 250, 250, 1);
+}
+input, label {
+  display: inline-block;
+  padding-top: 1em;
+  width: 100%;
+}
+.radio {padding-top: 1em;}
+.radio input {
+  width: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-right: 1em;
+}
+.radio label {padding: 0em;}
+.checkbox input {
+  width: 1em;
+  margin-top: 1em;
+}
+input, select {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+  width: 100%;
+  border-radius: 0.25em;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(170, 170, 170, 1);
+}
+#kortanumer{margin-bottom: 1em;}
+.manud {
+  display: inline-flex;
+  width: 100%;
+}
+.manud * {
+ display: inline-flex;
+}
+.manud label:nth-child(2) {
+  padding-left: 1em;
+}
+.manud label{padding: 0em;}
+.manud select {
+  margin-left: 2em;
+}
+select {padding: 0;}
+
+.panta input {
+  display: block;
+  background-color: rgba(77, 77, 77, 1);
+  margin: auto;
+  margin-bottom: 7em;
+  width: 20em;
+  border: none;
+  padding: 1em;
+  border-radius: 0.5em;
+  color: rgba(255, 255, 255, 1);
+}
+.panta :hover {
+    cursor: pointer;
+  }
+  /*Endi form síðu*/
+
+/* footer */
+.footer {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 140px;
+  background-color: rgba(77, 77, 77, 1);
+  color: rgba(255, 255, 255, 1);
+  padding-left: 18.75em;
+  padding-right: 17.5em;
+}
+@media (max-width: 600px) {
+  .footer {
+   padding-left: 0em;
+   padding-right: 0em;
+    } }
+  .footer__uppl {
+    margin: auto;
+    white-space: pre-line;
+    align-items: center;
+    text-align: center;
+    font-weight: 400;
+  }
+.footer2 {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(77, 77, 77, 1);
+  color: rgba(255, 255, 255, 1);
+  border-top: solid rgba(140, 140, 140, 1);
+}
+.footer2__bottom {
+  margin: auto;
+  white-space: pre-line;
+  align-items: center;
+  text-align: center;
+  color: rgba(140, 140, 140, 1);
+}
+
+.offset-2 {
+  margin-left: 16.66667%;
+}
+
+/* Um síðan */
+.texti {
+  margin-bottom: 1.25em;
+}
+.texti__h2 {
+  font-family: 'Roboto Slab', serif;
+  margin-left: 1em;
+  margin-top: 3.75em;
+  margin-bottom: 1.25em;
+}
+.texti__lina {
+  margin-left: 1.25em;
+  margin-right: 1.25em;
+  margin-bottom: 1.25em;
+  font-size: 1em;
+}
+  article {
+    width: 100%;
+  }
+  article p:nth-child(1) {
+    margin-bottom: 1.125em;
+    margin-left: 1.25em;
+    margin-right: 1.25em;
+  }
+  article p:nth-child(2) {
+    float: right;
+    width: 50%;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.3125em;
+    padding-left: 3.75em;
+    padding-right: 2.5em;
+    margin-bottom: 1.25em;
+    margin-top: 2em;
+  }
+  article p:nth-child(3) {
+    float: right;
+    width: 50%;
+    margin-left: 3em;
+    padding-left: 4.5em;
+  }
+  article p:nth-child(4) {
+    width: 50%;
+    margin-left: 1.25em;
+    padding-right: 7.5em;
+  }
+  article p:nth-child(5) {
+     margin-top: 1.125em;
+     margin-left: 1.25em;
+     margin-right: 1.25em;
+     margin-bottom: 5em;
+     }
+  @media (max-width: 600px) {
+    article p:nth-child(2) {
+      float: right;
+      padding-left: 2.5em;
+      padding-right: 2.5em;
+    }
+    article p:nth-child(3) {
+      float: right;
+      margin-bottom: 1.25em;
+      padding-left: 3em;
+    }
+    article p:nth-child(4) {
+      width: 100%;
+      padding-right: 3.75em;
+    }
+  }
+  @media (max-width: 400px) {
+    article p:nth-child(2) {
+      width: 100%;
+      padding-left: 2.5em;
+      padding-right: 4.5em;
+      margin-top: 1.25em;
+    }
+    article p:nth-child(3) {
+      width: 100%;
+      margin-bottom: 2.5em;
+    }
+    article p:nth-child(4) {
+      margin-right: 1.25em;
+      padding-right: 0em;
+      width: auto;
+    }
+    article p:nth-child(5) {
+      margin-bottom: 2.5em;
+    }
+  }

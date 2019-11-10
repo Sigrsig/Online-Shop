@@ -1,0 +1,24 @@
+.profiles {
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  &__col {
+    @include columns(4);
+    position: relative;
+    display: flex;
+    padding: 0;
+
+  @media (max-width: 600) {
+    @include columns(6);
+  }
+  @media (max-width: 400) {
+    @include columns(12);
+}
+}
+}

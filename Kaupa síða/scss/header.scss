@@ -1,0 +1,60 @@
+.headermynd {
+  display: flex;
+  margin-bottom: 16em;
+  padding: 2em;
+  width: 100%;
+  min-height: 900px;
+  background: transparent url(bg.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+@media (max-width: 600px) {
+  .headermynd {
+   margin-bottom: 4em;
+  } }
+  @keyframes fadein {
+   from {opacity:0;}
+   to {opacity:1;}
+  }
+  &__content {
+    margin: auto;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+  }
+  &__h1 {
+    font-size: 2.25em;
+    opacity: 0;
+    animation: fadein ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+  }
+  &__h2 {
+   font-size: 4.5em;
+   margin-bottom: 1em;
+   opacity: 0;
+   animation: fadein ease-in 1;
+   animation-fill-mode: forwards;
+   animation-duration: 1.5s;
+   animation-delay: 2s;
+}
+  @media (max-width: 600px) {
+    &__h2 {
+      font-size: 12vw;
+      } }
+  &__button {
+    background-color: rgba(89, 89, 89, 1);
+    border: 1px solid rgba(89, 89, 89, 1);
+    border-radius: 3px;
+    color: rgba(238, 238, 238, 1);
+    height: 60px;
+    width: 120px;
+    font-size: 28px;
+    opacity: 0;
+    animation: fadein ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+    animation-delay: 3s;
+   }
+   &__button:hover {
+    cursor: pointer;
+   }

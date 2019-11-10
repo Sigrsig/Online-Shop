@@ -1,0 +1,36 @@
+.text {
+
+ &__heading {
+    background-image: url("check.png");
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    padding-left: 45px;
+    justify-content: flex-start;
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'Roboto Slab', serif;
+    margin-top: 1em;
+  }
+  &__p {
+    margin-left: 2.6em;
+    margin-bottom: 6em;
+    font-size: 1.125em;
+  }
+  @media (max-width: 600px) {
+    &__p {
+      margin-bottom: 2em;
+    } }
+  @media (max-width: 400px) {
+    &__p {
+      margin-bottom: 2em;
+    } }
+  @media (max-width: 600px) {
+    &__img {
+      margin-top: 2.5em;
+    } }
+  @media (max-width: 400px) {
+    &__img {
+      margin-top: 1.5em;
+    } }
+  }
